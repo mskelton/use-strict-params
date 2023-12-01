@@ -6,15 +6,12 @@ type Primitive =
   | BooleanConstructor
 
 /** Returns the type that will be returned for the given primitive type. */
-type Hint<T> = T extends StringConstructor
-  ? string
-  : T extends NumberConstructor
-    ? number
-    : T extends BooleanConstructor
-      ? boolean
-      : T extends DateConstructor
-        ? Date
-        : never
+type Hint<T> =
+  T extends StringConstructor ? string
+  : T extends NumberConstructor ? number
+  : T extends BooleanConstructor ? boolean
+  : T extends DateConstructor ? Date
+  : never
 
 /** Transforms a primitive type into an optional type. */
 type OptionalConstructor = <T extends Primitive>(
