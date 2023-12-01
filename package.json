@@ -1,47 +1,60 @@
 {
-  "name": "npm-template",
-  "description": "",
+  "name": "use-strict-params",
+  "description": "Strictly typed params for React router.",
   "version": "0.0.0-semantically-released",
   "publishConfig": {
     "access": "public"
   },
   "author": "Mark Skelton",
-  "repository": "github:mskelton/npm-template",
+  "repository": "github:mskelton/use-strict-params",
   "bugs": {
-    "url": "https://github.com/mskelton/npm-template/issues"
+    "url": "https://github.com/mskelton/use-strict-params/issues"
   },
-  "homepage": "https://github.com/mskelton/npm-template#readme",
+  "homepage": "https://github.com/mskelton/use-strict-params#readme",
   "license": "ISC",
-  "keywords": [],
+  "keywords": [
+    "react",
+    "react-router",
+    "typescript",
+    "strict",
+    "params"
+  ],
   "type": "module",
   "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.js"
+    "types": "./lib/index.d.ts",
+    "import": "./lib/index.js"
   },
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --minify --clean --sourcemap",
     "lint": "eslint .",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
-    "test": "vitest"
+    "test": "vitest",
+    "ts": "tsc"
+  },
+  "peerDependencies": {
+    "react-router-dom": ">=6"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.10",
-    "@babel/eslint-parser": "^7.22.10",
-    "@mskelton/eslint-config": "^8.2.1",
+    "@mskelton/eslint-config": "^8.4.0",
     "@mskelton/tsconfig": "^2.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
-    "eslint": "^8.47.0",
-    "eslint-plugin-sort": "^2.10.0",
-    "eslint-plugin-vitest": "^0.2.8",
-    "prettier": "^3.0.2",
-    "semantic-release": "^21.1.0",
-    "tsup": "^7.2.0",
-    "typescript": "^5.1.6",
-    "vitest": "^0.34.2"
+    "@testing-library/react": "^14.1.2",
+    "@types/node": "^20.10.1",
+    "@types/react": "^18.2.39",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "eslint-plugin-sort": "^2.11.0",
+    "eslint-plugin-vitest": "^0.3.10",
+    "jsdom": "^23.0.1",
+    "prettier": "^3.1.0",
+    "react": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "semantic-release": "^22.0.8",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.2",
+    "vitest": "^1.0.0-beta.6"
   }
 }
