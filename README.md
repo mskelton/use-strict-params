@@ -1,6 +1,7 @@
 # use-strict-params
 
 [![Build status](https://github.com/mskelton/use-strict-params/workflows/Build/badge.svg)](https://github.com/mskelton/use-strict-params/actions)
+[![npm version](https://img.shields.io/npm/v/use-strict-params)](https://www.npmjs.com/package/use-strict-params)
 
 Strictly typed params for React router.
 
