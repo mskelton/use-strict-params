@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: mskelton/setup-pnpm@v2
+        with:
+          node-version: 20.x
       - name: Lint
         run: pnpm lint
       - name: Check formatting
@@ -13,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: mskelton/setup-pnpm@v2
+        with:
+          node-version: 20.x
       - name: Test
         run: pnpm test
       - name: Typecheck
@@ -26,6 +30,8 @@ jobs:
       pull-requests: write
     steps:
       - uses: mskelton/setup-pnpm@v2
+        with:
+          node-version: 20.x
       - name: Release
         run: pnpm semantic-release
         env:
